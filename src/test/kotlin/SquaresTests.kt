@@ -67,4 +67,11 @@ class SquaresTests {
         val result = decomposer.decomposeNumber(-50)
         assertNull(result)
     }
+
+    @Test
+    fun testDecompose10() {
+        val result = decomposer.decomposeNumber(11)
+        val expectedArray = arrayOf(1, 2, 4, 10)
+        assertArrayEquals(expectedArray, result)
+    }
 }
